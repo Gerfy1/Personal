@@ -1,0 +1,146 @@
+/* Estilos globais */
+* {
+    transition: all 0.2s ease-in-out;
+}
+  
+body {
+    background: #df63f8c9; 
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.loading-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(240, 112, 245);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    border-radius: 50% 50% 50% 50%;
+    position: absolute;
+    bottom: -100px;
+    animation: float 5s ease-in-out infinite;
+}
+
+.balloon:nth-child(2) {
+    left: 100px;
+    animation-delay: 1s;
+}
+
+.balloon:nth-child(3) {
+    left: 200px;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(4) {
+    left: 300px;
+    animation-delay: 3s;
+}
+
+.balloon:nth-child(5) {
+    left: 400px;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+.content {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+
+.card {
+    background: #12192c;
+    border-radius: 30px;
+    height: 85vh;
+    width: 80vw;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    overflow: hidden;
+    color:#f7814a;
+}
+
+@media only screen and (min-width: 1000px) {
+    .card {
+        flex-direction: row-reverse;
+    }
+    .card img.birthday {
+        width: 50%;
+        max-width: 50vw;
+        max-height: 60%;
+        border-radius: 30px;
+    }
+}
+
+@media only screen and (max-height: 640px) {
+    .card {
+        flex-direction: row-reverse;
+    }
+    .card img.birthday {
+        width: 100%;
+        max-width: 50vw;
+        max-height: unset;
+    }
+}
+
+img.birthday {
+    max-height: 40vh;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.text {
+    flex: 1;
+    padding: 1em;
+    text-align: center;
+}
+
+.text h1{
+    font-family:cursive;
+    font-size: 40px;
+}
+
+.space {
+    height: 100px;
+}
+
+.credit a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.credit {
+    margin-top: 10px;
+    text-align: center;
+}
